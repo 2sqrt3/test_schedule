@@ -1,16 +1,16 @@
 name: Hello World
 
-on:  # Trigger
+on:
   schedule:
-    - cron: '0 */1 * * *'  # cron 語法 UTC 16:00 = 台灣 UTC+8 = 00:00，每天執行
-  workflow_dispatch:  # 允許手動觸發
+    - cron: '43 * * * *'  # 每小時第 43 分執行（避開整點尖峰）
+  workflow_dispatch:
 
-jobs:  #Jobs
-  hello:  # first job's name
-    runs-on: ubuntu-latest  # Runner 設定
-    steps:  #定義步驟
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
       - name: 檢出程式碼
-        uses: actions/checkout@v4  #官方提供的 Action，用來 fetch 程式碼，讓後續步驟可以存取程式碼。
+        uses: actions/checkout@v4
 
       - name: 設定 Python
         uses: actions/setup-python@v4
