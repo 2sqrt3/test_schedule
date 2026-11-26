@@ -7,5 +7,3 @@ from datetime import datetime, timezone, timedelta
 
 print(f"halloworld")
 
-if __name__ == "__main__":
-    main()
