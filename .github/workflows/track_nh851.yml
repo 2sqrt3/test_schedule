@@ -2,7 +2,7 @@ name: Hello World
 
 on:  # Trigger
   schedule:
-    - cron: '0 16 * * *'  # cron 語法 UTC 16:00 = 台灣 UTC+8 = 00:00，每天執行
+    - cron: '0 */1 * * *'  # cron 語法 UTC 16:00 = 台灣 UTC+8 = 00:00，每天執行
   workflow_dispatch:  # 允許手動觸發
 
 jobs:  #Jobs
